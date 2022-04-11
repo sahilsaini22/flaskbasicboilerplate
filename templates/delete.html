@@ -1,0 +1,9 @@
+
+<form action= "{{ url_for('delete', task_id=task_id)}}" method="post">
+    {{form.csrf_token()}}
+<h3>{{title}}</h3>
+<p>Are you sure you want to delete the following task?</p>
+{{form.submit}}
+<a href="{{url_for('index')}}">cancel</a>
+</form>
+
